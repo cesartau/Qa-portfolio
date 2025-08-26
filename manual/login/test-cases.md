@@ -26,8 +26,9 @@ Steps: admin (lowercase) / admin123 → Login.
 Expected: “Invalid credentials”; you stay on login.				
 Actual: "valid credentials", you see the dashbard				
 Evidence:  
-![](./evidence/TC-005_username-case_FAIL_2025-08-25.png)  
-![](./evidence/TC-005_username-case_FAIL_2025-08-25.png-2.png)
+![img1](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
+![img2](./evidence/TC-005_username-case_FAIL_2025-08-25_2.png)
+
 
 				
 TC-006 – Password wrong case				
