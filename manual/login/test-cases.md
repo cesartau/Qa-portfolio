@@ -94,7 +94,10 @@ Technique: State transition [ES: transición de estados]
 Steps: Login → open user menu → Logout → press browser Back.				
 Expected: Remain on login; dashboard not accessible.				
 Actual: move to the user menu, dashboar is accesible 				
-				
+
+Defect evidence tc14:
+![img1](./TC-014_state-trantition_Defect_2025-08-25)
+![img1](./TC-014_state-trantition_Defect_2_2025-08-25)
 				
 TC-015 – Password field masking		PASS		
 Technique: UX/security				
