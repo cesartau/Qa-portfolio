@@ -25,8 +25,10 @@ Technique: EP (case sensitivity)
 Steps: admin (lowercase) / admin123 → Login.				
 Expected: “Invalid credentials”; you stay on login.				
 Actual: "valid credentials", you see the dashbard				
-Evidence: [TC-005_username-case_FAIL_2025-08-25.png](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
-Follow-up: Q-001 Username case sensitivity (clarification).
+Evidence:
+![](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
+![](./evidence/TC-005_username-case_FAIL_2025-08-25-2.png)
+
 				
 TC-006 – Password wrong case				
 Technique: EP (case) [ES: Partición de Equivalencia – sensibilidad a mayúsculas]				
