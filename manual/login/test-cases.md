@@ -4,7 +4,7 @@ Environment: Windows 11 Home Single Language- Firefox
 
 Creds: Admin / admin123
 
-Totals: Pass=<3>, Fail=<12>, Clarifications=<TC-015 – Password field masking SUGGESTIONS>
+Totals: Pass=<3>, Fail=<12>, Clarifications=<1>
 
 TC-001 – Valid login (happy path)			
 Technique: EP (positive)				
@@ -140,5 +140,7 @@ Expected: Characters are masked (•); visibility toggle (if present) works
 Actual: character are actually masked, visibility is not present 				
 Note: Suggestion, add/hide toggle to reduce typos (not a defect).	
 Result: PASS
+
+Follow-up: [CLAR-002](./defects/CLAR-002_password_toggle.md)
 
 
