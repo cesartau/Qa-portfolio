@@ -141,6 +141,6 @@ Actual: character are actually masked, visibility is not present
 Note: Suggestion, add/hide toggle to reduce typos (not a defect).	
 Result: PASS
 
-Follow-up: [CLAR-002](./defects/CLAR-002_password_toggle.md)
 
+Follow-up: [CLAR-002](./defects/CLAR-002_password_toggle.md)
 
