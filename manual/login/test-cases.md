@@ -1,34 +1,50 @@
-# OrangeHRM – Login Test Cases (Manual) - EP, BVA, USABILITY T, STATE TRANSTITION T AND UX/security	TESTING 
+# OrangeHRM – Login Test Cases (Manual) - EP, BVA, USABILITY TESTING, STATE TRANSTITION TESTING AND UX/security	TESTING 
 
-TC-001 – Valid login (happy path)		PASS		
+Environment: Windows 11 Home Single Language- Firefox
+
+Creds: Admin / admin123
+
+Totals: Pass=<3>, Fail=<12>, Clarifications=<TC-015 – Password field masking SUGGESTIONS>
+
+TC-001 – Valid login (happy path)			
 Technique: EP (positive)				
 Steps: Type Admin / admin123 → click Login.				
 Expected: You see the dashboard (URL has /dashboard or user menu appears).				
-				
-TC-002 – Empty username		FAIL 		
+Result: PASS		
+------------------------------------------------------------------------------------------------------
+
+TC-002 – Empty username		 		
 Technique: Required/BVA				
 Steps: Leave username blank; type any password → Login.				
-Expected: “Required” under username; you stay on login.				
+Expected: “Required” under username; you stay on login.		
+Result: FAIL
+
 				
-TC-003 – Empty password		FAIL		
+TC-003 – Empty password			
 Technique: Required/BVA				
 Steps: Type any username; leave password blank → Login.				
-Expected: “Required” under password; you stay on login.				
+Expected: “Required” under password; you stay on login.		
+Result: FAIL
+------------------------------------------------------------------------------------------------------
 				
-TC-004 – Wrong password		FAIL 		
+TC-004 – Wrong password			
 Technique: EP (negative)				
 Steps: Admin / wrongpass → Login.				
-Expected: “Invalid credentials”; you stay on login.				
+Expected: “Invalid credentials”; you stay on login.
+Result: FAIL
+
 				
-TC-005 – Username wrong case		FAIL	 	
+TC-005 – Username wrong case		 	
 Technique: EP (case sensitivity)				
 Steps: admin (lowercase) / admin123 → Login.				
 Expected: “Invalid credentials”; you stay on login.				
 Actual: "valid credentials", you see the dashbard				
+Result: FAIL
 
 TC-005 bug evidence:   
 ![img1](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
 ![img2](./evidence/TC-005_username-case_FAIL_2025-08-25_2.png)
+
 
 
 				
@@ -36,7 +52,8 @@ TC-006 – Password wrong case
 Technique: EP (case) [ES: Partición de Equivalencia – sensibilidad a mayúsculas]				
 Steps: Admin / ADMIN123 → Login.				
 Expected: “Invalid credentials”; stay on login.				
-Actual: “Invalid credentials”; you stay on login.				
+Actual: “Invalid credentials”; you stay on login.
+Result: FAIL
 				
 				
 				
@@ -44,64 +61,84 @@ TC-007 – Username with leading/trailing spaces			FAIL
 Technique: EP (whitespace) [ES: espacios]				
 Steps: ␠Admin␠ / admin123 → Login.				
 Expected: App trims or rejects consistently; no crash. Record actual.				
-Actual: “Invalid credentials”; you stay on login.				
-				
+Actual: “Invalid credentials”; you stay on login.		
+Result: FAIL
+
+------------------------------------------------------------------------------------------------------			
 				
 TC-008 – Both fields empty				
-Technique: BVA/Required [ES: Análisis de Fronteras / obligatorio]				FAIL
+Technique: BVA/Required [ES: Análisis de Fronteras / obligatorio]				
 Steps: Username blank; Password blank → Login.				
 Expected: “Required” under both fields; stay on login.				
 Actual: "Creddential required" you stay on login				
+Result: FAIL
+
+ 
 				
-				
-TC-009 – Password too short (7)		FAIL		
+TC-009 – Password too short (7)			
 Technique: BVA (lower)				
 Steps: Admin / admin12 → Login.				
 Expected: “Invalid credentials”; stay on login.				
 Actual: “Invalid credentials”; you stay on login.				
-				
-				
-TC-010 – Password too long (9)		FAIL		
+Result: FAIL				
+
+
+ 
+TC-010 – Password too long (9)			
 Technique: BVA (upper-near)				  
 Steps: Admin / admin1234 → Login.				
 Expected: “Invalid credentials”; stay on login.				
-Actual: “Invalid credentials”; you stay on login.				
+Actual: “Invalid credentials”; you stay on login.	
+Result: FAIL
+
 				
 				
-TC-011 – Username very long (≥255)			FAIL	
+TC-011 – Username very long (≥255)			
 Technique: BVA (upper/robustness)				
 Steps: Paste 255+ chars in Username; any password → Login.				
 Expected: Field blocks extra or shows error; app stable; stay on login.				
-Actual: “Invalid credentials”; you stay on login.				
+Actual: “Invalid credentials”; you stay on login.	
+Result: FAIL
+
+------------------------------------------------------------------------------------------------------				
 				
-				
-TC-012 – Press Enter submits		PASS		
+TC-012 – Press Enter submits				
 Technique: Usability sanity				
 Steps: Fill Admin / admin123 → press Enter.				
 Expected: Same as clicking Login; dashboard appears.				
-Actual: Same as clicking Login; dashboar appears.				
-				
+Actual: Same as clicking Login; dashboar appears.	
+Result: Pass
+
+------------------------------------------------------------------------------------------------------				
 				
 TC-013 – SQL/JS injection string in username			FAIL	
 Technique: EP (negative/security)				
 Steps: Username " or 1=1 -- ; any password → Login.				
 Expected: Generic invalid error; no crash.				
-Actual: “Invalid credentials”; you stay on login.				
+Actual: “Invalid credentials”; you stay on login.	
+Result: FAIL
+
+------------------------------------------------------------------------------------------------------				
 				
-				
-TC-014 – Logout prevents back navigation			FAIL	
+TC-014 – Logout prevents back navigation			
 Technique: State transition [ES: transición de estados]				
 Steps: Login → open user menu → Logout → press browser Back.				
 Expected: Remain on login; dashboard not accessible.				
-Actual: move to the user menu, dashboar is accesible 				
+Actual: move to the user menu, dashboar is accesible 	
+Result: FAIL
 
 Defect evidence tc14:
 ![img1](./TC-014_state-trantition_Defect_2025-08-25)
 ![img1](./TC-014_state-trantition_Defect_2_2025-08-25)
+
+------------------------------------------------------------------------------------------------------
 				
-TC-015 – Password field masking		PASS		
+TC-015 – Password field masking		
 Technique: UX/security				
 Steps: Type in Password field and observe.				
 Expected: Characters are masked (•); visibility toggle (if present) works				
 Actual: character are actually masked, visibility is not present 				
-Note: Suggestion, add/hide toggle to reduce typos (not a defect).				
+Note: Suggestion, add/hide toggle to reduce typos (not a defect).	
+Result: PASS
+
+
