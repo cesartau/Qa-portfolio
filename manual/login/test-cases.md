@@ -142,6 +142,6 @@ Note: Suggestion, add/hide toggle to reduce typos (not a defect).
 Result: PASS
 
 
-Follow-up: [CLAR-002](./defects/CLAR-002_password_toggle.md)
+Follow-up: [CLAR-002](https://github.com/cesartau/Qa-portfolio/blob/main/manual/login/defects/CLAR-002_password_toggle.md)
 
 
