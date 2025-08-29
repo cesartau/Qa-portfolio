@@ -42,6 +42,7 @@ Actual: "valid credentials", you see the dashbard
 Result: FAIL
 
 Evidence:
+
 ![](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
 ![](./evidence/TC-005_username-case_FAIL_2025-08-25_2.png)
 
