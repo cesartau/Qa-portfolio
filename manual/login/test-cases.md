@@ -130,8 +130,9 @@ Actual: move to the user menu, dashboar is accesible
 Result: FAIL
 
 Defect evidence tc14:
-![](./evidence/TC-014_state-trantittion_Defect_2025-08-25.png)
-![](./evidence/TC-014_state-trantittion_Defect_2_2025-08-25.png)
+![](https://raw.githubusercontent.com/cesartau/Qa-portfolio/main/manual/login/evidence/TC-014_state-trantittion_Defect_2025-08-25.png)
+![](https://raw.githubusercontent.com/cesartau/Qa-portfolio/main/manual/login/evidence/TC-014_state-trantittion_Defect_2_2025-08-25.png)
+
 
 
 ------------------------------------------------------------------------------------------------------
