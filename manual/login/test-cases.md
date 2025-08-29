@@ -41,9 +41,9 @@ Expected: “Invalid credentials”; you stay on login.
 Actual: "valid credentials", you see the dashbard				
 Result: FAIL
 
-TC-005 bug evidence:   
-![img1](.TC-005_username-case_FAIL_2025-08-25.png.png)
-![img2](./evidence/TC-005_username-case_FAIL_2025-08-25_2.png)
+Evidence:
+![](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
+![](./evidence/TC-005_username-case_FAIL_2025-08-25_2.png)
 
 
 
