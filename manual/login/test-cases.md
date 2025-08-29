@@ -59,7 +59,7 @@ Result: FAIL
 				
 				
 				
-TC-007 – Username with leading/trailing spaces			FAIL	
+TC-007 – Username with leading/trailing spaces			
 Technique: EP (whitespace) [ES: espacios]				
 Steps: ␠Admin␠ / admin123 → Login.				
 Expected: App trims or rejects consistently; no crash. Record actual.				
@@ -113,7 +113,7 @@ Result: Pass
 
 ------------------------------------------------------------------------------------------------------				
 				
-TC-013 – SQL/JS injection string in username			FAIL	
+TC-013 – SQL/JS injection string in username			
 Technique: EP (negative/security)				
 Steps: Username " or 1=1 -- ; any password → Login.				
 Expected: Generic invalid error; no crash.				
