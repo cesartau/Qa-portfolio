@@ -42,7 +42,7 @@ Actual: "valid credentials", you see the dashbard
 Result: FAIL
 
 TC-005 bug evidence:   
-![img1](./evidence/TC-005_username-case_FAIL_2025-08-25.png)
+![img1](.TC-005_username-case_FAIL_2025-08-25.png.png)
 ![img2](./evidence/TC-005_username-case_FAIL_2025-08-25_2.png)
 
 
