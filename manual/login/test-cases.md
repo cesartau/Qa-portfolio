@@ -131,8 +131,9 @@ Result: FAIL
 
 Defect evidence tc14:
 Evidence (TC-14):
-![](https://raw.githubusercontent.com/cesartau/Qa-portfolio/main/manual/login/evidence/TC-014_state-trantittion_Defect_2025-08-25.png)
-![](https://raw.githubusercontent.com/cesartau/Qa-portfolio/main/manual/login/evidence/TC-014_state-trantittion_Defect_2_2025-08-25.png)
+![](./evidence/TC-014_state-trantittion_Defect_2025-08-25.png)
+![](./evidence/TC-014_state-trantittion_Defect_2_2025-08-25.png)
+
 
 
 ------------------------------------------------------------------------------------------------------
