@@ -131,6 +131,9 @@ Result: FAIL
 
 Defect evidence tc14:
 ![](./evidence/TC-014_state-trantition_Defect_2025-08-25.png)
+![](./evidence/TC-014_state-trantition_Defect_2_2025-08-25.png)
+
+
 
 
 ------------------------------------------------------------------------------------------------------
