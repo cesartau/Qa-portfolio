@@ -1,67 +1,24 @@
-Login — Traceability (with charts)
+# Login – Quick Traceability (no charts)
 
-Goal: Requirement → test coverage, visually and in a matrix.
-Counts: Requirements: 7 · Covered: 7/7 · Open defect: DEF-014 · Clarification: CLAR-002
+**Purpose:** One-screen map from requirements → test cases → result.  
+**Env:** Windows 11 • Firefox  **Creds:** Admin / admin123
 
-Coverage chart (requirements)
-pie title Login coverage (requirements)
-  "Covered" : 5
-  "Covered (defect open)" : 1
-  "Covered (clarification/UX)" : 1
+Legend: ✅ PASS 🟠 Defect logged 📝 Clarification/UX
 
-Requirement → Test mapping (graph)
+| # | Requirement (what should happen)                                   | Test case(s)          | Result |
+|---|--------------------------------------------------------------------|-----------------------|:------:|
+| 1 | Valid login opens the dashboard                                    | TC-001, TC-012        | ✅ PASS |
+| 2 | Username required when blank                                       | TC-002                | ✅ PASS |
+| 3 | Password required when blank                                       | TC-003                | ✅ PASS |
+| 4 | Wrong credentials show “Invalid credentials”                       | TC-004, TC-013        | ✅ PASS |
+| 5 | Username case policy is handled (defined/insensitive)              | TC-005                | ✅ PASS |
+| 6 | After **Logout**, pressing browser **Back** does **not** reopen app | TC-014                | 🟠 See DEF-014 |
+| 7 | Password is masked; toggle works *if present*                      | TC-015                | 📝 See CLAR-002 |
 
-flowchart LR
-  subgraph Requirements
-    R1[ R1: Valid login ]
-    R2[ R2: Username required ]
-    R3[ R3: Password required ]
-    R4[ R4: Invalid creds msg ]
-    R5[ R5: Username case policy ]
-    R6[ R6: Logout+Back blocked ]
-    R7[ R7: Masked password/toggle ]
-  end
+## Links
+- Test cases: [manual/login/test-cases.md](../login/test-cases.md)
+- Defect (logout + back): [defects/DEF-014_logout_back.md](defects/DEF-014_logout_back.md)
+- Clarification (password toggle): [defects/CLAR-002_password_toggle.md](defects/CLAR-002_password_toggle.md)
+- Evidence (screens): [manual/login/evidence/](evidence/)
 
-  subgraph TestCases
-    TC001[TC-001]
-    TC002[TC-002]
-    TC003[TC-003]
-    TC004[TC-004]
-    TC005[TC-005]
-    TC012[TC-012]
-    TC013[TC-013]
-    TC014[TC-014]
-    TC015[TC-015]
-  end
-
-  R1 --> TC001
-  R1 --> TC012
-  R2 --> TC002
-  R3 --> TC003
-  R4 --> TC004
-  R4 --> TC013
-  R5 --> TC005
-  R6 --> TC014
-  R7 --> TC015
-
-
-| Req | What it means                                      | Test Case(s)                                     | Defect / Note                                   | Status |
-| :-: | -------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------- | :----: |
-|  R1 | Valid credentials → dashboard                      | [TC-001](test-cases.md), [TC-012](test-cases.md) | —                                               |    ✅   |
-|  R2 | Empty username shows **Required**                  | [TC-002](test-cases.md)                          | —                                               |    ✅   |
-|  R3 | Empty password shows **Required**                  | [TC-003](test-cases.md)                          | —                                               |    ✅   |
-|  R4 | Wrong creds → **Invalid credentials**              | [TC-004](test-cases.md), [TC-013](test-cases.md) | —                                               |    ✅   |
-|  R5 | Username case policy (defined/insensitive)         | [TC-005](test-cases.md)                          | *(ES: si la política fuera estricta)*           |    ✅   |
-|  R6 | After logout, browser **Back** must not reopen app | [TC-014](test-cases.md)                          | [DEF-014](defects/DEF-014_logout_back.md)       |   🟠   |
-|  R7 | Password masked; toggle (if present) works         | [TC-015](test-cases.md)                          | [CLAR-002](defects/CLAR-002_password_toggle.md) |   📝   |
-
-Legend: ✅ Covered · 🟠 Covered with open defect · 📝 Clarification/UX
-
-ASCII quick view (for PDFs / plain text)
-LOGIN COVERAGE
-+------------------------------+---------+---------+-------------+
-| Area                         | Covered | Defects | Clarif/UX   |
-+------------------------------+---------+---------+-------------+
-| Requirements (R1..R7)        | 7/7     | DEF-014 | CLAR-002    |
-+------------------------------+---------+---------+-------------+
 
