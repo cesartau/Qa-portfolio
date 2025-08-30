@@ -17,7 +17,7 @@
   - Clarification (not a bug): [`CLAR-002_password_toggle.md`](manual/login/defects/CLAR-002_password_toggle.md)
 - **Evidence (screens):** [`manual/login/evidence/`](manual/login/evidence/)
 - **Summary report:** [`manual/login/summary.md`](manual/login/summary.md)
-- **Traceability matrix**[`)
+- **Traceability matrix**[`Qa-portfolio/manual/login/traceability.md`]
 ## Folder map
 
 manual/
