@@ -10,13 +10,13 @@
 - **Results:** Pass: <X> | Fail: <Y> | Defects: <Z>
 
 ## Navigate
-- ▶️ **Test Cases:** [`manual/login/test-cases.md`](manual/login/test-cases.md)
-- 📊 **Decision Table & State Transition:** [`manual/login/decision-table.md`](manual/login/decision-table.md)
-- 🐞 **Defects:** [`manual/login/defects/`](manual/login/defects/)
+- **Test Cases:** [`manual/login/test-cases.md`](manual/login/test-cases.md)
+- **Decision Table & State Transition:** [`manual/login/decision-table.md`](manual/login/decision-table.md)
+- **Defects:** [`manual/login/defects/`](manual/login/defects/)
   - Back nav after logout: [`DEF-014_logout_back.md`](manual/login/defects/DEF-014_logout_back.md)
   - Clarification (not a bug): [`CLAR-002_password_toggle.md`](manual/login/defects/CLAR-002_password_toggle.md)
-- 🖼️ **Evidence (screens):** [`manual/login/evidence/`](manual/login/evidence/)
-- 🧭 **Summary report:** [`manual/login/summary.md`](manual/login/summary.md)
+- **Evidence (screens):** [`manual/login/evidence/`](manual/login/evidence/)
+- **Summary report:** [`manual/login/summary.md`](manual/login/summary.md)
 
 ## Folder map
 
