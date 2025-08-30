@@ -1,28 +1,67 @@
-# Login — Traceability Matrix
+Login — Traceability (with charts)
 
-**Legend:** Covered · Covered with known defect ·  Clarification/UX note
+Goal: Requirement → test coverage, visually and in a matrix.
+Counts: Requirements: 7 · Covered: 7/7 · Open defect: DEF-014 · Clarification: CLAR-002
 
----
+Coverage chart (requirements)
+pie title Login coverage (requirements)
+  "Covered" : 5
+  "Covered (defect open)" : 1
+  "Covered (clarification/UX)" : 1
 
-## Coverage at a glance
-- Requirements: **7**
-- Test cases: **TC-001…TC-015** (see `test-cases.md`)
-- Open defects: **DEF-014** (logout + Back)
+Requirement → Test mapping (graph)
 
----
+flowchart LR
+  subgraph Requirements
+    R1[ R1: Valid login ]
+    R2[ R2: Username required ]
+    R3[ R3: Password required ]
+    R4[ R4: Invalid creds msg ]
+    R5[ R5: Username case policy ]
+    R6[ R6: Logout+Back blocked ]
+    R7[ R7: Masked password/toggle ]
+  end
 
-## Matrix
+  subgraph TestCases
+    TC001[TC-001]
+    TC002[TC-002]
+    TC003[TC-003]
+    TC004[TC-004]
+    TC005[TC-005]
+    TC012[TC-012]
+    TC013[TC-013]
+    TC014[TC-014]
+    TC015[TC-015]
+  end
 
-| ID | Requirement (short) | Test Case(s) | Defect / Note | Status |
-|:--:|---|---|---|:--:|
-| R1 | Valid credentials → dashboard | [TC-001](test-cases.md) · [TC-012](test-cases.md) | — | ✅ |
-| R2 | Empty username shows **Required** | [TC-002](test-cases.md) | — | ✅ |
-| R3 | Empty password shows **Required** | [TC-003](test-cases.md) | — | ✅ |
-| R4 | Wrong creds → **Invalid credentials** | [TC-004](test-cases.md) · [TC-013](test-cases.md) | — | ✅ |
-| R5 | Username case policy (defined/insensitive) | [TC-005](test-cases.md) | (optional) `DEF-005` if raised | ✅ |
-| R6 | **After logout**, browser **Back** must **not** reopen app | [TC-014](test-cases.md) | [DEF-014](defects/DEF-014_logout_back.md) | 🟠 |
-| R7 | Password field is masked; toggle (if present) works | [TC-015](test-cases.md) | [CLAR-002](defects/CLAR-002_password_toggle.md) | 📝 |
+  R1 --> TC001
+  R1 --> TC012
+  R2 --> TC002
+  R3 --> TC003
+  R4 --> TC004
+  R4 --> TC013
+  R5 --> TC005
+  R6 --> TC014
+  R7 --> TC015
 
-> **Notes**
-> - Links go to the files you already have (`test-cases.md`, `defects/…`).  
-> - If you want deep links to a specific TC section, add anchors in `test-cases.md` (e.g., `## TC-001 – Valid login`) and link like `test-cases.md#tc-001--valid-login`.
+
+| Req | What it means                                      | Test Case(s)                                     | Defect / Note                                   | Status |
+| :-: | -------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------- | :----: |
+|  R1 | Valid credentials → dashboard                      | [TC-001](test-cases.md), [TC-012](test-cases.md) | —                                               |    ✅   |
+|  R2 | Empty username shows **Required**                  | [TC-002](test-cases.md)                          | —                                               |    ✅   |
+|  R3 | Empty password shows **Required**                  | [TC-003](test-cases.md)                          | —                                               |    ✅   |
+|  R4 | Wrong creds → **Invalid credentials**              | [TC-004](test-cases.md), [TC-013](test-cases.md) | —                                               |    ✅   |
+|  R5 | Username case policy (defined/insensitive)         | [TC-005](test-cases.md)                          | *(ES: si la política fuera estricta)*           |    ✅   |
+|  R6 | After logout, browser **Back** must not reopen app | [TC-014](test-cases.md)                          | [DEF-014](defects/DEF-014_logout_back.md)       |   🟠   |
+|  R7 | Password masked; toggle (if present) works         | [TC-015](test-cases.md)                          | [CLAR-002](defects/CLAR-002_password_toggle.md) |   📝   |
+
+Legend: ✅ Covered · 🟠 Covered with open defect · 📝 Clarification/UX
+
+ASCII quick view (for PDFs / plain text)
+LOGIN COVERAGE
++------------------------------+---------+---------+-------------+
+| Area                         | Covered | Defects | Clarif/UX   |
++------------------------------+---------+---------+-------------+
+| Requirements (R1..R7)        | 7/7     | DEF-014 | CLAR-002    |
++------------------------------+---------+---------+-------------+
+
