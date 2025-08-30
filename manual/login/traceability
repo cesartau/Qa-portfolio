@@ -1,0 +1,10 @@
+# Login – Traceability Matrix (Matriz de trazabilidad)
+
+| Req ID | Short requirement (EN) | Fuente/Notes (ES) | Test Case(s) | Defect(s) |
+|-------:|------------------------|-------------------|--------------|-----------|
+| R1     | Valid creds → dashboard | Requisito implícito de login correcto | TC-001, TC-012 | – |
+| R2     | Empty username shows “Required” | Validación de campo obligatorio | TC-002 | – |
+| R3     | Empty password shows “Required” | Validación de campo obligatorio | TC-003 | – |
+| R4     | Wrong creds → “Invalid credentials” | Manejo de error de autenticación | TC-004, TC-013 | – |
+| R5     | Case-insensitive username (or policy) | Política de mayúsculas/minúsculas | TC-005 | DEF-005 (si aplica) |
+| R6     | Logout must block browser Back | Seguridad post logout | TC-014 | DEF-014 |
