@@ -1,3 +1,5 @@
+**Tracked in:** [Issue #1](https://github.com/cesartau/Qa-portfolio/issues/1)
+
 # DEF-014 – Logout allows back navigation
 Severity: Medium • Priority: High  
 Environment: Windows 11, Firefox
