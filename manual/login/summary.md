@@ -6,7 +6,7 @@
 **Credentials:** Admin / admin123
 
 ## Metrics
-- Test cases: <total> (Pass: <x>, Fail: <y>)
+- Totals: Pass=<3>, Fail=<12>, Clarifications=<1>
 - Defects logged: 1 (medium): DEF-014 (Back nav after logout)
 - Clarifications: 1 (UX): CLAR-002 (show/hide password toggle not present)
 
