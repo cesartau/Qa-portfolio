@@ -1,10 +1,28 @@
-# Login – Traceability Matrix (Matriz de trazabilidad)
+# Login — Traceability Matrix
 
-| Req ID | Short requirement (EN) | Fuente/Notes (ES) | Test Case(s) | Defect(s) |
-|-------:|------------------------|-------------------|--------------|-----------|
-| R1     | Valid creds → dashboard | Requisito implícito de login correcto | TC-001, TC-012 | – |
-| R2     | Empty username shows “Required” | Validación de campo obligatorio | TC-002 | – |
-| R3     | Empty password shows “Required” | Validación de campo obligatorio | TC-003 | – |
-| R4     | Wrong creds → “Invalid credentials” | Manejo de error de autenticación | TC-004, TC-013 | – |
-| R5     | Case-insensitive username (or policy) | Política de mayúsculas/minúsculas | TC-005 | DEF-005 (si aplica) |
-| R6     | Logout must block browser Back | Seguridad post logout | TC-014 | DEF-014 |
+**Legend:** Covered · Covered with known defect ·  Clarification/UX note
+
+---
+
+## Coverage at a glance
+- Requirements: **7**
+- Test cases: **TC-001…TC-015** (see `test-cases.md`)
+- Open defects: **DEF-014** (logout + Back)
+
+---
+
+## Matrix
+
+| ID | Requirement (short) | Test Case(s) | Defect / Note | Status |
+|:--:|---|---|---|:--:|
+| R1 | Valid credentials → dashboard | [TC-001](test-cases.md) · [TC-012](test-cases.md) | — | ✅ |
+| R2 | Empty username shows **Required** | [TC-002](test-cases.md) | — | ✅ |
+| R3 | Empty password shows **Required** | [TC-003](test-cases.md) | — | ✅ |
+| R4 | Wrong creds → **Invalid credentials** | [TC-004](test-cases.md) · [TC-013](test-cases.md) | — | ✅ |
+| R5 | Username case policy (defined/insensitive) | [TC-005](test-cases.md) | (optional) `DEF-005` if raised | ✅ |
+| R6 | **After logout**, browser **Back** must **not** reopen app | [TC-014](test-cases.md) | [DEF-014](defects/DEF-014_logout_back.md) | 🟠 |
+| R7 | Password field is masked; toggle (if present) works | [TC-015](test-cases.md) | [CLAR-002](defects/CLAR-002_password_toggle.md) | 📝 |
+
+> **Notes**
+> - Links go to the files you already have (`test-cases.md`, `defects/…`).  
+> - If you want deep links to a specific TC section, add anchors in `test-cases.md` (e.g., `## TC-001 – Valid login`) and link like `test-cases.md#tc-001--valid-login`.
