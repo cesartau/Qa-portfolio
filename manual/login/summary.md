@@ -1,13 +1,18 @@
-# Login Suite – Test Summary
-Run date: 2025-08-25 • Browser: Firefox
+# Test Summary – Login
 
-Totals: **15** | Pass: **3** | Fail: **12**
+**Scope:** OrangeHRM Login  
+**Out of scope:** API, non-login modules (PIM, Leave, etc.)  
+**Environment:** Windows 11, Firefox  
+**Credentials:** Admin / admin123
 
-Key fails → DEF-014 (logout/back), DEF-005 (username case).
+## Metrics
+- Test cases: <total> (Pass: <x>, Fail: <y>)
+- Defects logged: 1 (medium): DEF-014 (Back nav after logout)
+- Clarifications: 1 (UX): CLAR-002 (show/hide password toggle not present)
 
-Next actions:
-- Fix cache/redirect after logout.
-- Confirm username case policy; update tests accordingly.
-- Add negative security cases to backlog (rate-limit, lockout).
+## Risks / Notes
+- Back navigation exposes dashboard after logout (security/UX).
+- Case-insensitive username accepted (documented as observation in TC-005).
 
-Links: [Test cases](./test-cases.md) • [Defects](./defects)
+## Exit criteria
+- All critical login paths pass; no blocker defects remain.
